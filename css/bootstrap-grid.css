@@ -1,0 +1,60 @@
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+}
+.grid-overlay span {
+  position: relative;
+  display: block;
+  height: 100vh;
+  background: rgba(255,0,0,0.05);
+}
+.grid-overlay span:before {
+  content: "";
+  display: block;
+  width:1px;
+  height: 100vh;
+  background: rgba(255,0,0,0.1);
+}
+.grid-overlay span:after {
+  position: absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  content: "";
+  display: block;
+  width:1px;
+  height: 100vh;
+  background: rgba(255,0,0,0.1);
+}
+
+.container {
+  padding-left:16px;
+  padding-right: 16px;
+  overflow: hidden;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.col {
+  padding-left:8px;
+  padding-right:8px;
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  .col {
+    padding-left:4px;
+    padding-right:4px;
+  }
+}
